@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Waseem</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+    <script type='text/javascript' src="js/jquery.arctext.js"></script>
+</head>
+
+<body>
+    <input type="text" id="ta" class="changeMe" maxlength="10">
+    <div id="container" class="changeMe">
+        <div id="float">
+            <p></p>
+        </div>
+    </div>
+
+
+
+
+    <script type='text/javascript'>
+        //<![CDATA[ 
+
+        $(window).load(function () {
+            function update() {
+                var text = '<p>' + $('#ta').val() + '</p>',
+                    size = 20,
+                    font = 'Roboto';
+                font1 = 'sans-serif';
+
+                $('#float')
+                    .css({
+                        fontFamily: font1,
+                        fontFamily: font,
+                        fontSize: size + 'px'
+                    })
+                    .html(text)
+                    .find('p')
+                    .arctext({radius: 150});
+
+            }
+
+            $('#ta').keyup(update);
+            $("#fs, #size").change(update);
+        });
+
+         //]]>
+    </script>
+
+
+</body>
+
+
+</html>
+
