@@ -17,10 +17,17 @@
             height: 400px;
             border: 1px solid red;
 		}
-        #float p{
+        #float #name{
             position: absolute;
             left: 50%;
-            top: 20%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        #float #num1{
+            font-size: 100px;
+            position: absolute;
+            left: 50%;
+            top: 45%;
             transform: translate(-50%, -50%);
         }
 	</style>
@@ -28,9 +35,11 @@
 
 <body>
     <input type="text" id="ta" class="changeMe" maxlength="10">
+    <input type="number" id="number" class="changeMe" min="0" max="99">
     <div id="container" class="changeMe">
-        <div id="float" style="">
-            <p style=""></p>
+        <div id="float">
+            <div id="name"></div>
+            <div id="num1"></div>
         </div>
     </div>
 
@@ -40,27 +49,36 @@
     <script type='text/javascript'>
         //<![CDATA[ 
 
-        $(window).load(function () {
+        $(document).ready(function () {
             function update() {
-                var text = '<p>' + $('#ta').val() + '</p>',
+                var text = '<p class="parah">' + $('#ta').val() + '</p>',
                     size = 20,
                     font = 'Roboto';
-                font1 = 'sans-serif';
+                    font1 = 'sans-serif';
 
-                $('#float')
+                $('#name')
                     .css({
                         fontFamily: font1,
                         fontFamily: font,
                         fontSize: size + 'px'
                     })
                     .html(text)
-                    .find('p')
+                    .find('.parah')
                     .arctext({radius: 100});
 
             }
-
             $('#ta').keyup(update);
             $("#fs, #size").change(update);
+        });
+        $(document).ready(function(){
+            $(function(){
+                $('#number').keyup(function(){
+                    var text2 = '<p class="para">' + $('#number').val() + '</p>';
+                    $('#num1').html(text2).find('.num').css({
+                        fontSize: 24 + 'px'
+                    });
+                });
+            });
         });
 
          //]]>
