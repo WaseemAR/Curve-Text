@@ -17,11 +17,14 @@
 <h1>CurvedText</h1>
 <div class="jquery-script-clear"></div>
 </div>
-<img src="tshirt.png" alt="" width="300px">
 <form action="index.php" method="post">
     <input type="text" class="tex" name="text8">
     <input type="submit" name="submit" id="" value="submit">
 </form>
+<br>
+<div>
+	<img src="tshirt.png" alt="" width="300px">
+</div>
 <!--<div id="text1"> Hm, looks like the wonderful arctext plugin. </div>-->
 <!--<div id="text2"> And this looks like the amazing circletype plugin! </div>
 <div id="text3"> But, what the heck is that? Well, that's a bezier curve! </div>
