@@ -8,10 +8,12 @@
     <script type='text/javascript' src='js/jquery.min.js'></script>
     <script type='text/javascript' src="js/jquery.arctext.js"></script>
     <style>
-		#float{
-			height: 100%;
-			width: 100%;
-			background-image: url(jpeg.jpg) no-repeat;
+		#float p{
+			position: relative;
+			top: -350px;
+			left: 150px;
+			color: red;
+			font-weight: 300;
 		}
 	</style>
 </head>
@@ -19,9 +21,9 @@
 <body>
     <input type="text" id="ta" class="changeMe" maxlength="10">
     <div id="container" class="changeMe">
-        <div id="float" style="position:relative;">
-        <img src="jpeg.jpg" alt="">
-        <p style="position:absolute;"></p>
+       <img src="jpeg.jpg" alt="">
+        <div id="float">
+        	<p></p>
         </div>
     </div>
 
