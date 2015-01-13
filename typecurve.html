@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Waseem</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script type='text/javascript' src='js/jquery.min.js'></script>
     <script type='text/javascript' src="js/jquery.arctext.js"></script>
     <style>
@@ -18,12 +18,19 @@
             border: 1px solid red;
 		}
         #float #name{
+			text-transform: uppercase;
+			font-size: 24px;
+			color: #E41D2F;
+			fill: #E41D2F;
             position: absolute;
             left: 50%;
             top: 25%;
             transform: translate(-50%, -50%);
         }
         #float #num1{
+			font-family: "Oswald",sans-serif;
+			font-size: 24px;
+			color: #E41D2F;
             font-size: 100px;
             position: absolute;
             left: 50%;
@@ -35,7 +42,7 @@
 
 <body>
     <input type="text" id="ta" class="changeMe" maxlength="10">
-    <input type="number" id="number" class="changeMe" min="0" max="99">
+    <input type="number" id="number" class="changeMe" min="0" max="99" maxlength="2">
     <div id="container" class="changeMe">
         <div id="float">
             <div id="name"></div>
@@ -53,7 +60,7 @@
             function update() {
                 var text = '<p class="parah">' + $('#ta').val() + '</p>',
                     size = 20,
-                    font = 'Roboto';
+                    font = 'Oswald';
                     font1 = 'sans-serif';
 
                 $('#name')
